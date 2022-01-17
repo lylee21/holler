@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Holler Dashboard</h1>
+
+<div id="hollers">
+  <% @hollers.each do |holler| %>
+    <%= render holler %>
+    <p>
+      <%= link_to "Show Holler", holler, class: "btn btn-info" %>&nbsp;
+      <%= link_to "New holler", new_holler_path, class: "btn btn-info" %>
+    </p>
+  <% end %>
+</div>

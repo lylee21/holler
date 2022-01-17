@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<br/>
+<div class="mx-auto" style="width: 400px;">
+  <%# <div class = "text-center"> %>
+  <br/>
+  <%# <div class="mx-auto" style="width: 400px;"> %>
+  <div>
+    <%= link_to "Back", hollers_path, class: "btn btn-info" %> &nbsp;
+    <%= link_to "Edit", edit_holler_path(@holler), class: "btn btn-info" %> &nbsp;
+    <%# <%= link_to "Show holler", holler, class: "btn btn-info" %>
+  </div>
+  <br/>
+  <div>
+    <%= render @holler %>
+  </div>
+  
+  
+  <div>
+  <%= button_to "Delete", @holler, method: :delete, class: "btn btn-info" %>
+  </div>
+</div>
+

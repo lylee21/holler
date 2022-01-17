@@ -1,0 +1,2 @@
+class Holler < ApplicationRecord
+end

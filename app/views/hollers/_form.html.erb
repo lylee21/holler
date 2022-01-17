@@ -1,0 +1,33 @@
+<%= form_with(model: holler) do |form| %>
+  <% if holler.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(holler.errors.count, "error") %> prohibited this holler from being saved:</h2>
+
+      <ul>
+        <% holler.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <div class = "field form-group">
+      <% form.label :heading, style: "display: block" %>
+      <%= form.text_field :title, class: "form-control", placeholder: "Heading" %>
+    </div>
+
+    <div class = "field form-group">
+      <% form.label :subheading, style: "display: block" %>
+      <%= form.text_field :subtitle, class: "form-control", placeholder: "subheading" %>
+    </div>
+
+    <div class = "field form-group">
+      <% form.label :message, style: "display: block" %>
+      <%= form.text_area :message, class: "form-control",placeholder: "Message" %>
+    </div>
+    <br/>
+    <div>
+      <%= form.submit class: "btn btn-info" %>
+    </div>
+  </div>
+<% end %>
